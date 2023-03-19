@@ -37,13 +37,20 @@ function index() {
         <title>PDFviewer</title>
         <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
       </Head>
-      <div className="w-full h-screen bg-gray-700 flex justify-center items-center">
+      <div className="w-full h-screen bg-gray-700 flex flex-col justify-center items-center">
         <button
           className="btn btn-outline rounded-lg"
           onClick={() => handleSubscribe()}
         >
           Click to pay
         </button>
+        <div className="mt-4 w-1/4">
+          <p className="text-xl text-center text-gray-50">
+            When I click on this button, gray backgroud should be there, If I
+            remove the plugin <i>plugins: [require("daisyui")],</i> from
+            tailwind.config.js, it will give the required result.
+          </p>
+        </div>
       </div>
     </div>
   );
